@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>CSS Basics Summary</title>
+    <link rel="stylesheet" href="./WK1HW1_styles.css" />
+</head>
+
+<body>
+    <h1>What is CSS?</h1>
+
+    <p> CSS (<span class="bold underline">C</span>ascading <span class="bold underline">S</span>tyle <span class="bold underline">S</span>heets) is a style sheet language. It is used to selectively style HTML elements.
+    The CSS needs to be applied to a HTML document to change the appearance by linking it to a HTML document.
+
+    </p>
+
+    <h2> Anatomy of a CSS ruleset</h2>
+    <p> The whole structure as shown in the figure below is known as a ruleset (often referred to as just a rule)</p>
+
+    <img src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/css-declaration-small.png"
+            alt="Anatomy of a CSS ruleset" width="300" />
+
+    <p>There are four main individual parts of the ruleset:
+        <li> Selector:
+            This is the HTML element name at the start of the ruleset. It defines the element(s) to be styled (in this
+            example, <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p">  &lt; p &gt;  </a> elements). To style a different element, change the selector.</li>
+            <br>
+        <li> Declaration: This is a single rule like color: red;. It specifies which of the element's properties you
+            want to style.</li>
+            <br>
+        <li> Properties: These are the ways in which you can style an HTML element. (In this example, color is a
+            property of the  &lt; p &gt; elements.) In CSS, you choose which properties you want to affect in the rule.</li>
+            <br>
+        <li> Property value: To the right of the property - after the colon - there is the propert value. This chooses
+            one out of many possible appearances for a given propert. (For example, there are many color values in
+            addition to red.)</li>
+    </p>
+    <p>
+        There are also other important parts of the syntax:
+        <li> Each ruleset must be wrapped in curly braces ({})apart from the selector</li>
+        <li> You must use a colon (:) to separate the property from its value(s)</li>
+        <li> You must use a semicolon (;), to separate each declaration from the next one.</li>
+
+    </p>
+
+    <p> To modify multiple property values in one ruleset, use semicolons to separare them. You can also select multiple
+        elements and apply a single ruleset to all of them by separating them by commas.
+
+    </p>
+
+    <h2> Different types of selectors</h2>
+    The most common types of selectors are as follows:
+    <li> Element selector(Tag/type selector): This selects all HTML elements of the specified type e.g. p selects &lt; p &gt;
+    </li>
+    <li> ID selector: Selects element on the page with the specified ID. Each ID value should be unique on a given HTML
+        page. e.g #my-id selects   &lt; p id= &quot;my-id&quot;&gt; or &lt; a id= &quot;my-id&quot; &gt;
+    </li>
+    <li>Class selector: Selects element(s) on the page with the specified class. Multiple instances of the same class
+        can appear on the same page. eg .my-class selects
+        &lt; p class= &quot;my-class&quot;&gt; and &lt; a class= &quot;my=class&quot;&gt;
+    </li>
+    <li> Attribute selector: Selects elements on the page with the specified attribute. e.g. img[src] selects &lt;img
+            src= &quot;myimage.png&quot;&gt; but not &lt;img&gt;
+    </li>
+    <li> Pseudo-class selector: Selects specified elements but only when in specified state.(For example, when a cursor
+        hovers over a link) e.g a:hover selects &lt;a&gt;, but only when the mouse pointer is hovering over the link.
+    </li>
+
+    <h2> Fonts and text</h2>
+
+    <p>
+        Different fonts and text that can be applied to a HTML document. There are 5 generic
+        font-families, each of which has different variations as portrayed under
+        <a target="_blank" href="https://www.w3schools.com/Css/css_font.asp"> CSS Fonts </a> on the w3schools website.
+        The font-size, font-style(normal, italics, oblique),font-weight, font-variant(mornal or small-caps),
+        font-stretch(condensed, normal or expanded) are just a few examples of how font can be manipulated.
+
+    </p>
+    <h2> CSS: all about boxes</h2>
+    <p>
+        CSS is all about boxes from setting size, color, and position. HTML elements can also be thought of boxes
+        sitting on top of ther boxes. Each box taking up space on the page has properties like the following (which can
+        also be styled):
+        <li> padding, the space around the content/ paragraph text</li>
+        <li> border, solid line just outside the padding</li>
+        <li> margin, space around the outside of the border</li>
+        </p>
+
+        <img src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/box-model.png"
+            alt="Properties of a box model on CSS" 
+            width="400" />
+       
+       <p>
+            Other properties of a box model that can be styled are:
+        <li> width of an element</li>
+        <li> back-ground color, color behind an element's content and padding</li>
+        <li> color, the color of an element's content (usually) text</li>
+        <li> text-shadow , which sets a drop shadow on the text inside an element. </li>
+        <li> display, which sets the display mode of an element. Example changing images(inline elements) to act as a
+            block element like the <body> </li>
+         </p>
+
+</body>
+
+</html>

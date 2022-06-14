@@ -1,0 +1,60 @@
+body {
+    color:black;
+    background-color: #f3eaec;
+    font-family:  Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2em;
+}
+
+h1{ 
+    color: rgb(57, 35, 134);
+    font-family: cursive ;
+    text-align: center;
+}
+
+h2{ 
+    color: rgb(31, 28, 156);
+    font-family: cursive ;
+    text-align: center; 
+}
+
+h3{ 
+    color: rgb(5, 4, 32);
+    font-family: cursive ;
+    font-size: 1em;
+    font-weight: bold; 
+}
+
+img{
+    display:block;
+    margin: 0 auto;
+
+}
+
+table, th, td {
+    border: 1px solid teal;
+  }
+
+  .bold{
+    font-weight: bold;
+    font-size: 1em;
+}  
+
+.underline { 
+    text-decoration: underline;
+}
+
+.indent{
+    text-indent: 40px;
+}
+
+#red-text{
+    color:rgb(190, 2, 2);
+}
+
+#green-text{
+    color: rgb(8, 88, 8);
+}
+
+#blue-text{ 
+    color: rgb(15, 15, 146);
+}

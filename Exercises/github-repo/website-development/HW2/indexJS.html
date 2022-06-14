@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript basics Summary</title>
+    <link rel="stylesheet" href="./stylesJS.css" />
+</head>
+
+<body>
+    <h1>What is JavaScript?</h1>
+    <p> JavaScript is a programming language that adds interactivity to your website. This happens in games, in the
+        behaviour of responses when buttons are pressed or with data entry on forms; with dynamic styling; with
+        animation, etc. </p>
+    <p> <span class="bold "> P.S.</span> It ws invented by Brendan Eich (co-founder of the Mozilla project, the Mozilla Foundation, and the Mozilla
+        Corporation).</p>
+    <p> It is versatile and beginner-friendly. You can create games, animated 2D and 3D graphics, comprehesive
+        database-driven apps and much more!</p>
+    <p> It is relatively compacy, yet very flexible. Developers have written many tools on top of the core JavaScript
+        language, unlocking a vast amount of functionality with minimum effort. For example:</p>
+    <li> Browser Application Programming Interfaces (<a target="_blank"
+            href="https://developer.mozilla.org/en-US/docs/Glossary/API"> APIs </a>) built into web browsers, providing
+        functionalitty such as dynamically creating HTML and setting CSS styles; collecting and manipulating video
+        stream from a user's webcam, or generating 3D grpahics and audio samples.</li>
+    <li> Third-party APIs that allow developers to incorporate functionality in sites from other content providers, such
+        as Twitter or Facebook</li>
+    <li> Third-party frameworks and libraries that you can apply to HTML to accelerate the work of building sites and
+        applications. </li>
+
+    <h2> A Hello world! example</h2>
+    <p> To get comfortable with Java Script, you have to start small and progress gradually. Use the following steps to
+        add JavaScript yo your age for creating a Hello world! example.</p>
+    <ol> 
+    <li> Go to test site and create a new folder named scripts. In this folder, create a new file called main.js, and
+        save it</li>
+    <li> In your index.html file, enter this code on a new line, just befroe the closing &lt;/body&gt; tag: </p>
+    <p> &lt;<span id="red-text">script</span> <span id="green-text">src</span> = "<span id="blue-text">scripts/main.js</span>"&gt;&lt;/<span id="red-text">script</span>&gt; </li>
+    <li> This is doing the same job as the <a target="_blank"
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link"> &lt;link&gt; </a> element for CSS, It
+        applies the JavaScript to the page, so it can have an effect on the HTML (along with the CSS, and anything else
+        on the page).</li>
+    <li> Add this code to the main.js file:</li>
+    <p> <span id="blue-text">const</span> myHeading = document.<span id="red-text">queryselector</span>('<span id="green-text">h1</span>'); </p>
+    <p> myHeading.textContent = '<span id="green-text">Hello world!</span>';</p>
+    <li> Make sure the HTML and Javascript files are saved. Then load index.html in your browser. You should see
+        something like this:</li>
+    </ol>    
+    <img src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics/hello-world.png"
+        alt="My test image">
+    <p> <span class="bold underline"> NOTE:</span> The reason the instructions place the &lt;/script&gt; element near the bottom of the HTML file is that <strong>the
+        browser reads the code in the order it appears in file</strong>. If the JavaScript loads first and is supposed to affect
+        the HTML that hasn't loaded yet, there could be problems. Placing JavaScript near the bottom of an HTML page is
+        one way to accomodate this dependency. To learn more about alternative approaches, see <a
+        target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#script_loading_strategies">
+        Script loading strategies </a> .</p>
+
+    <h2> What happened?</h2>
+    <p> The heading text changed to Hello world! using JavaScript. You did this by using a function called <a
+            target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector">
+            querySelector() </a> to grab a reference to your heading, and then store it in a variable called myHeading.
+        This is similar to what we did using CSS selectors. When youwant to something to an element, you select it
+        first.</p>
+    <p> Following that, the code set the value of th myHeading variable's <a target="_blank"
+            href="https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent">
+            textContent </a> property (which represents the content of the heading) to Hello world!.</p>
+
+    <h2> Language basics crash course</h2>
+    <p> The following are some core features of JavaScript to better understand how it works.</p>
+
+    <h3> Variables</h3>
+    <p> <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Glossary/Variable">
+            Variables </a> are containers that store values. You start by declaring a variable with the <a
+            target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var">
+            var </a> (less recommended,
+        dive deeper for the explanation or the <a target="_blank"
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let">
+            let </a> keyword, followed by the name you give to the variable:</p>
+    <p> <span id="blue-text">let</span> myVariable;</p>
+    <p> <span class="bold underline"> NOTE:</span> A semi-colon at the end of a line indicates where a statement ends. It is only required when you need to
+        separate statements on a single line. There are other rules for when you should and shouldn't use semicolons.
+        For more details, see <a target="_blank"
+            href="https://news.codecademy.com/your-guide-to-semicolons-in-javascript/">
+            Your Guide to Semicolons in JavaScript</a></p>
+    <p> <span class="bold underline"> NOTE:</span> You can name a variable nearly anything, but there are some restrictions.(<a target="_blank"
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#variables">
+            See this section about naming rules</a>.) If you are unsure, you can <a target="_blank"
+            href="https://mothereff.in/js-variables"> check your variable name </a> to see if it's valid.</p>
+    <p> <span class="bold underline"> NOTE:</span> JavaScript is case sensitive. Ths means myVariable is not the same as myVariable. If you have problems in
+        your code, check the case!</p>
+    <p> <span class="bold underline"> NOTE:</span> For more details about the dfference between var and let, see <a target="_blank"
+            href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables#the_difference_between_var_and_let">
+            The difference between var and let. </a> </p>
+    <p> After declaring a varable, you can give it a value:</p>
+    <p class="indent"> myVariable = '<span id="green-text">Bob</span>';</p>
+    <p> Also, you can do both there operations on the same line:</p>
+    <p class="indent"> let myVariable = '<span id="green-text">Bob</span>';</p>
+    <p> You retrieve the value by calling the variable name:</p>
+    <p class="indent"> myVariable;</p>
+    <p>After assigning a value to a variable, you can cn=hange it later in the code:</p>
+    <p class="indent"> let myVariable = 'Bob'; </p>
+    <p class="indent"> myVariable = 'Steve';</p>
+    <p> Note that variables may hold values that have different <a target="_blank"
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures">
+            data types </a>:</p>
+
+    <table>
+        <tr>
+            <th>Variable</th>
+            <th>Explantion</th>
+            <th>Example</th>
+        </tr>
+        <tr>
+            <th> <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Glossary/String"> String </a></th>
+            <th> A sequence of text known as a string. To signify that the value is a string, enclose it in single quote
+                marks</th>
+            <th> let myVariable = 'Bob';</th>
+        </tr>
+        <tr>
+            <th> <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a> </th>
+            <th> This is a number. Numbers don't have quotes around them.</th>
+            <th> let myVariable = 10;</th>
+        </tr>
+        <tr>
+            <th> <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Glossary/Boolean"> Boolean</a> </th>
+            <th> This is a True/False value. The words true and false are special keywords that don't need quote marks.
+            </th>
+            <th> let myVariable = true;</th>
+
+        </tr>
+        <tr>
+            <th> <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Glossary/array"> Array</a> </th>
+            <th> This is a structure that allows you to store multiple values in a single reference..</th>
+            <th> let myVariable = [1,'Bob','Steve',10];<br>
+                Refer to each member of the array like this:<br>
+                myVariable[0], myVariable[1], etc.</th>
+
+        </tr>
+        <tr>
+            <th> <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Glossary/Object"> Object</a> </th>
+            <th> This can be anything. Everything in JavaScript is an object and can be stored in a variable. Keep this
+                in mind as you learn. </th>
+            <th> let myVariable = document.querySelector('h1'). All of the above examples too.</th>
+        </tr>
+    </table>
+
+    <p> Variables are necessary to do anything interesting in programming. If values couldn't change, then you couldn't
+        do anything dynamic, like personalize a greeting message or change an image displayed in an image gallery.</p>
+
+    <h3> Comments</h3>
+    <p> Comments are snippets of text that can be added along with code. The browser ignores text marked as comments.
+        You can write comments in JavaScript just as you can in CSS:</p>
+    <p class="indent"> /* Everything in between is a comment */ </p>
+    <p> If your comment contains no line breaks, it's an option to put it behind two slashes like this:</p>
+    <p class="indent"> // This is a comment</p>
+
+    <h3> Operators</h3>
+    <p> An operator is a mathematical symbol that produces a result based on two values (or variables). In the following
+        table, you can see some of the simplest operators, along with some examples to try in the JavaScript console.
+    </p>
+    <table>
+        <tr>
+            <th>Operator</th>
+            <th>Explantion</th>
+            <th>Symbol(s)</th>
+            <th>Example</th>
+        </tr>
+        <tr>
+            <th> Addition </th>
+            <th> Add two numbers together or combine two strings.</th>
+            <th> + </th>
+            <th> 6 + 9; <br>
+                'Hello' + 'world!'; </th>
+        </tr>
+        <tr>
+            <th> Subtraction, Multiplication, Division </th>
+            <th> These do what you'd expect them to do in basic math.</th>
+            <th> -, *, / </th>
+            <th> 9 - 3 ; <br>
+                8 * 2 ; // multiply in JSS is an asterisk <br>
+                9 / 3;</th>
+        </tr>
+        <tr>
+            <th> Assignment </th>
+            <th> As you've seen already: this assigns a value to a variable.</th>
+            <th> = </th>
+            <th> let myVariable = 'Bob';</th>
+        </tr>
+        <tr>
+            <th> Equality </a> </th>
+            <th> This performs a test to see if two values are equal. It returns a true/false (Boolean) result.</th>
+            <th> === </th>
+            <th> let myVariable = 3; <br>
+                myVariable === 4;</th>
+        </tr>
+        <tr>
+            <th> Not, Does-not-equal </th>
+            <th> This returns the logically opposite value of what it precedes. It turns a true into a false, etc..<br> When
+                it is used alongside the Equality operator, the negation operator tests whether two values are not
+                equal. </th>
+            <th> !, !==</th>
+            <th> For "Not", the basic expression is true, but the comparison returns false because we negate it: <br>
+
+                let myVariable = 3; <br>
+                !(myVariable === 3);<br>
+
+                "Does-not-equal" gives basically the same result with different syntax. Here we are testing "is
+                myVariable NOT equal to 3". This returns false because myVariable IS equal to 3: <br>
+
+                let myVariable = 3; <br>
+                myVariable !== 3;</th>
+        </tr>
+    </table>
+    <p> There are a lot more operators to explore, but this is enough for now. <a target="_blank"
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators"> See Expressions and
+            operators </a> for a complete list.</p>
+
+    <h3> Conditionals </h3>
+    <p> They are code structures used to test if an expression returns true or not. A very common form of conditionals
+        is the if ... else statement. For example: </p>
+    <p class="indent"> <span id="blue-text">let</span> iceCream = '<span id="green-text">chocolate</span>'; </p>
+    <p class="indent"> <span id="blue-text">if</span>(iceCream === '<span id="green-text">chocolate</span>') { </p> 
+    <p class="indent">    <span id="red-text">alert</span>('<span id="green-text">Yay, I love chocolate ice cream!</span>'); </p> 
+    <p class="indent">    } <span id="blue-text">else</span> { </p> 
+    <p class="indent">    <span id="red-text">alert</span>('<span id="green-text">Awwww, but chocolate is my favorite...</span>'); </p> 
+    <p class="indent">    } </p> 
+    
+    <p> The expression inside the if (...) is the test. This uses the identity operator(as described above) to compare
+        the variable iceCream with the string chocolate to see if the two are equal. If this comparison returns true,
+        the first blovk of code runs, If the comparison is not true, the second block of code - after the else statement
+        - runs instead. </p>
+
+    <h3> Functions </h3>
+    <p> <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Glossary/Function"> Functions
+        </a> are a way of packaging functionality that you wish to reuse. It's possible to define a body of code as a
+        function that executes when you call the function name in your code. This is a good alternative to repeatedly
+        writing the same code. For example: </p>
+        <ol>
+    <li> <span id="blue-text">let</span> myVariable = document.<span id="red-text">querySelector</span>('<span id="green-text">h1</span>'); </li>
+    <li> <span id="red-text">alert</span>('<span id="green-text">hello!</span>');</li>
+      </ol>
+    <p> These functions, document.querySelector and alert, are built into the browser.</p>
+    <p> If you see something which looks like a variable name, but it's followed by parentheses— () —it is likely a
+        function. Functions often take <a target="_blank"
+            href="https://developer.mozilla.org/en-US/docs/Glossary/Argument"> arguments
+        </a>: bits of data they need to do their job. Arguments go inside the
+        parentheses, separated by commas if there is more than one argument.
+
+        For example, the alert() function makes a pop-up box appear inside the browser window, but we need to give it a
+        string as an argument to tell the function what message to display.
+
+        You can also define your own functions. In the next example, we create a simple function which takes two numbers
+        as arguments and multiplies them:
+    </p>
+    <p class="indent"> <span id="blue-text">function</span> <span id="red-text">multiply</span>(num1,num2) { </p>
+    <p class="indent"> <span id="red-text">let</span> result = num1 * num2; </p>
+    <p class="indent"> <span id="red-text">return</span> result; </p>
+    <p class="indent"> } </p>
+
+    <p><span class="bold underline"> NOTE:</span> The return statement tells the browser to return the result variable out of the function so it is available
+        to use. This is necessary because variables defined inside functions are only available inside those functions.
+        This is called <a target="_blank"
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#variable_scope">
+            variable scoping
+        </a> . </p>
+
+    <h3> Events</h3>
+    <p> Real interactivity on a website requires event handlers. These are code structures that listen for activity in
+        the browser, and run code in response. The most obvious example is handling the click event, which is fired by
+        the browser when you click on something with your mouse. To demonstrate this, enter the following into your
+        console, then click on the current webpage:</p>
+    <p>document.<span id="red-text">querySelector</span>('<span id="green-text">html</span>').<span id="red-text">onclick</span> = <span id="blue-text">function</span>() { <br>
+        <span id="red-text">alert</span>('<span id="green-text">Ouch! Stop poking me!</span>');
+        } </p>
+    <p> There are many ways to attach an event handler to an element. Here we select the &lt;html&gt; element, setting
+        its
+        onclick handler property equal to an anonymous (i.e. nameless) function, which contains the code we want the
+        click event to run.</p>
+    <p> <span class="bold underline"> NOTE:</span> </p>
+    <p class="indent"> document.<span id="red-text">querySelector</span>('<span id="green-text">html</span>').<span id="red-text">onclick</span> = <span id="blue-text">function</span>() {};</p>
+    <p> is equivalent to </p>
+    <p class="indent"> <span id="blue-text">let</span> myHTML = document.<span id="red-text">querySelector</span>('<span id="green-text">html</span>'); </p>
+    <p class="indent"> myHTML.<span id="red-text">onclick</span> = <span id="blue-text">function</span>() {}; </p>
+
+
+    <h2> Supercharging our example website</h2>
+    <p> Let's add a few features to our example site.</p>
+
+    <h3> Adding an image changer</h3>
+    <p> Here you will learn how to use JavaScript and DOM API features to alternate the display of one of two images.
+        This change will happen as a user clicks the displayed image.</p>
+        <ol>
+    <li>  Choose an image you want to feature on your example site. ideally, the image will be the same size as the
+        image you added previously or as close as possible.</li>
+    <li>  Save this image in your images folder</li>
+    <li>  Rename the image firefox2.png.</li>
+    <li>  Add the JavaScript below to your main.js file</li>
+    <p> <span id="blue-text">let</span>let myImage = document.<span id="red-text">querySelector</span>('<span id="green-text">img</span>');
+        <p> myImage.<span id="red-text">onclick</span> = <span id="blue-text">function</span>() {</p>
+        <p class="indent"> <span id="blue-text">let</span> mySrc = myImage.<span id="red-text">getAttribute</span>(<span id="green-text">'src'</span>);</p>
+        <p class="indent"> <span id="blue-text">if</span>(mySrc === '<span id="green-text">images/firefox-icon.png</span>') {</p>
+        <p class="indent"> myImage.<span id="red-text">setAttribute</span>('<span id="green-text">src</span>','<span id="green-text">images/firefox2.png</span>'); </p>
+        <p class="indent">} else { </p>
+        <p class="indent">myImage.<span id="red-text">setAttribute</span>('<span id="green-text">src</span>','<span id="green-text">images/firefox-icon.png</span>'); </p>
+        <p class="indent">}</p>
+        <p>}</p>
+    <li>  Save all files and load index.html in the browser. Now when you click the image, it should change to the
+        other
+        one </li> </ol>
+    <p> This is what happened. You stored a reference to your <a target="_blank"
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">
+            &lt;img&gt; </a> element in the myImage variable. Next, you made this variable's onclick event handler
+        property equal to a function with no name (an "anonymous" function). So every time this element is clicked: </p>
+    <ol>
+    <li> The code retrieves the value of the image's src attribute.</li>
+    <li> The code uses a conditional to check if the src value is equal to the path of the original image:</li>
+    </ol>
+    <ol>
+    <li> If it is, the code changes the src value to the path of the second image, forcing the other image to be
+        loaded inside the <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">
+            &lt;img&gt; </a> element. </li>
+    <li> If it isn't (meaning it must already have changed), the src value swaps back to the original image path, to the
+        original state. </li>
+    </ol>
+
+    <h3> Adding a personalized welcome message</h3>
+    <p>Next, we will change the page title to a personalized welcome message when the user first visits the site. This
+        welcome message will persist. Should the user leave the site and return later, we will save the message using <a
+            target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API">
+            Web Storage API </a> . We will also include an option to change the user, and therefore, the welcome
+        message.</p>
+        <ol> 
+    <li> In index.html, add the following line just before the <a target="_blank"
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">
+            &lt;script &gt; </a> element: </li>
+    <p> &lt;<span id="red-text">button</span>&gt; Change user &lt;/<span id="red-text">button</span>&gt;</p>
+    <li> In main.js, place the following code at the bottom of the file, exactly as it is written. This takes
+        references to the new button and the heading, storing each inside variables:</li>
+    <p class="indent"> <span id="blue-text">let</span> myButton = document.<span id="red-text">querySelector</span>('<span id="green-text">button</span>');</p>
+    <p class="indent"><span id="blue-text">let</span> myHeading = document.<span id="red-text">querySelector</span>('<span id="green-text">h1</span>');</p>
+    <li> Add the function below to set the personalized greeting. This won't do anything yet, but this will change
+        soon.</li>
+    <p class="indent"> <span id="blue-text">function</span> <span id="red-text">setUsername</span>(){ </p>
+    <p class="indent">let myName = <span id="blue-text">prompt</span>(<span id="green-text">'Please enter your name.'</span>); </p>
+    <p class="indent">localStorage.<span id="red-text">setItem</span>('<span id="green-text">name</span>', myName); </p>
+    <p class="indent">myHeading.textContent = <span id="green-text">'Mozilla is cool,'</span> + myName; </p>
+    <p> The setUserName() function contains a <a target="_blank"
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">
+            prompt() </a> function, which displays a dialog box, similar to alert(). This prompt() function does more
+        than alert(), asking the user to enter data, and storing it in a variable after the user clicks OK. In this
+        case, we are asking the user to enter a name. Next, the code calls on an API localStorage, which allows us to
+        store data in the browser and retrieve it later. We use localStorage's setItem() function to create and store a
+        data item called 'name', setting its value to the myName variable which contains the user's entry for the name.
+        Finally, we set the textContent of the heading to a string, plus the user's newly stored name. </p>
+    <li> Add the if ... else block(below). We could call this initialization code, as it structures the app when it
+        first loads. </li>
+    <p class="indent"> <span id="blue-text">if</span>(!localStorage.<span id="blue-text">getItem</span>(<span id="green-text">'name'</span>)) { </p>
+    <p class="indent"> <span id="red-text">setUserName</span>(); </p>
+    <p class="indent">} <span id="blue-text">else</span> { </p>
+    <p class="indent"><span id="blue-text">let</span> storedName = localStorage.<span id="red-text">getItem</span>(<span id="green-text">'name'</span>); </p>
+    <p class="indent">myHeading.textContent = <span id="green-text">'Mozilla is cool, '</span> + storedName; </p>
+    <p class="indent">} </p>
+    <p> This first line of this block uses the negation operator(logical NOT, represented by the !) to check whether the
+        name data exists. If not, the setUserName( ) function runs to create it. If it exists (that is, the user set a
+        user name during a previous visit, we retrieve the stored name using getItem() and set the textContent of the
+        heading to a string, plus the user's name, as we did inside setUserName( ). </p>
+    <li> Put this onclick event handler (below) on the button, When clicked, setUserName( ) runs. This allows the user
+        to enter a different name by pressing the button.</li> 
+        <p class="indent"> myButton.<span id="red-text">onclick</span> = <span id="blue-text">function</span>( ) {</p>
+        <p class="indent"><span id="red-text">setUserName</span>( );</p>
+        <p class="indent">}</p>
+    </ol>
+
+    <h3> A username of null?</h3>
+    <p> When you run the example and get the dialog box that prompts you to enter your user name, try pressing the
+        Cancel button. You should end up with a title that reads Mozilla is cool, <a target="_blank"
+        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">
+        null </a>. Null is a special value in JavaScript that refers to the absence of a value. </p>
+    <p> Also, try clicking OK without entering a name. You should end up with a title that reads Mozilla is cool, for fairl obvious reasons.</p>
+    <p> To avoid these problems, you could check that the user hasn't entered a blank name. Update your setUserName() function to this: </p>
+        <p class="indent"> <span id="blue-text">function</span> <span id="red-text">setUserName</span>() {</p>
+        <p class="indent"><span id="blue-text">let</span> myName = <span id="red-text">prompt</span>(<span id="green-text">'Please enter your name.'</span>);</p>
+        <p class="indent"><span id="blue-text">if</span>(!myName) {</p>
+        <p class="indent"><span id="red-text">setUserName</span>( );</p>
+        <p class="indent"> } <span id="blue-text">else</span> {</p>
+        <p class="indent">localStorage.<span id="red-text">setItem</span>setItem(<span id="green-text">'name'</span>, myName);</p>
+        <p class="indent">myHeading.textContent = <span id="green-text">'Mozilla is cool, '</span> + myName;</p>
+        <p class="indent">}</p>
+        <p class="indent"> }</p>
+      
+      <p> In human language, this means: If myName has no value, run setUserName() again from the start. If it does have a value (if the above statement is not true), then store the value in localStorage and set it as the heading's text.</p>
+
+      <h2> Conclusion</h2>
+      <p> If you have followed all the instructions, you should end up with a page that looks something like the image below. </p>
+      <img src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics/website-screen-scripted.png"
+        alt="My test image">
+</body>
+
+</html>
